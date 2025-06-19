@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                git 'https://github.com/manishbad/pythonproject.git'
+                    url: 'https://github.com/manishbad/pythonproject.git'
             }
         }
 
@@ -26,4 +26,3 @@ pipeline {
         }
     }
 }
-
