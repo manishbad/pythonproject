@@ -20,7 +20,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.image('python-hello-app').run('-p 5000:5000')
+                    sh "docker run -itd -p 5000:5000 python-hello-app"
                 }
             }
         }
